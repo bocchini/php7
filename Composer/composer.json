@@ -1,0 +1,14 @@
+{
+    "name": "bocchini/composer",
+    "description": "Php 7 composer",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Americo L Bocchini",
+            "email": "albocchini@gmail.com"
+        }
+    ],
+    "require": {
+        "monolog/monolog":"1.0.*"
+    }
+}

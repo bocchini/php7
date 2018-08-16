@@ -1,0 +1,37 @@
+Arquivo para consulta rápida
+
+
+$empresa = str_replace("o", "0", $empresa); = primeiro parametro o que será trocado, segundo parametro pelo que? terceiro em que lugar
+
+$indiceDaPalavraAchada = strpos($frase, "mãe"); = procura pela uma palavra e retorna o índice dela
+
+strlen($palavra) = conta quantidades de caracteres
+
+$require = obriga que o arquivo exista e esteja funcionando, caso não gera erro fatal
+$include = tenta funcionar mesmo que não exista ou esteja com erro (Dá acesso ao include path e permite include dinâmico)(péssima pratica)
+
+session_start() -> Se o servidor não estiver setado para session, tem que ser acrescentado em todas as páginas
+session_unset($_SESSION['nome']) => apaga a variável de sessão
+session_destroy() => limpa a variável e remove o usuário da sessão
+
+Utilizando o & em uma função você troca o valor da referencia que é passado para variável
+ex.:
+$a=10;
+
+function trocaValor(&$b)
+{
+	$b += 50;
+	return $b;
+}
+
+echo trocaValor($a); //Mostra 60
+echo $a; // Saída tabmém é 60 trocou o valor da referencia
+
+in_array(ondeEuProcuro,opçoes)
+PHP7
+No php7 erros fatais não param mais o servidor agora geram erros fatais para serem tratados
+function soma(int ...$valores){	return array_sum($valores);} => recebe um array de inteiros, se for passado um ponto flutuante ele ignora
+
+
+Rodar o servidor escolhendo a porta e pasta
+php -S localhost:8080 t- public
